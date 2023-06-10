@@ -33,7 +33,7 @@ public class MovementController : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
-        _moveDir = new Vector2(x, y);
+        _moveDir = new Vector2(x, y).normalized;
     }
 
     private void Move()

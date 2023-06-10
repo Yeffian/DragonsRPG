@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    [SerializeField] private ScoreCounter score;
+    [SerializeField] private ScoreManager score;
     
     // Start is called before the first frame update
     void Start()

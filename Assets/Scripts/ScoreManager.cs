@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class ScoreCounter : MonoBehaviour
+public class ScoreManager : MonoBehaviour
 {
     public int Score { get; set; }
 
