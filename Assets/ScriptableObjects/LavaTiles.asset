@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd53f888ece0374992f9611fcbf077c, type: 3}
   m_Name: LavaTiles
   m_EditorClassIdentifier: 
-  tiles: []
-  IsDangerous: 0
+  tiles:
+  - {fileID: 11400000, guid: ebee71d142dd6fa438bc0cd2e3a45a0c, type: 2}
+  - {fileID: 11400000, guid: 3a1d3dc0a9057e447b8a8231eed3599a, type: 2}
+  IsDangerous: 1

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
 public class MapManager : MonoBehaviour
@@ -38,7 +39,7 @@ public class MapManager : MonoBehaviour
 
         TileBase selectedTile = tilemap.GetTile(gridPos);
         bool isDangerous = tiles[selectedTile].IsDangerous;
-        
-        Debug.Log(isDangerous ? "dangerous tile" : "safe tile");
+
+        if (isDangerous) SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
 }
