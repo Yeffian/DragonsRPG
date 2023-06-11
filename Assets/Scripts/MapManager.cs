@@ -38,6 +38,6 @@ public class MapManager : MonoBehaviour
         TileBase selectedTile = tilemap.GetTile(gridPos);
         bool isDangerous = tiles[selectedTile].IsDangerous;
 
-        if (isDangerous) SceneManager.LoadScene(0, LoadSceneMode.Single);
+        if (isDangerous) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
     }
 }
