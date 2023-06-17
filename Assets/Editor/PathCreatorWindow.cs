@@ -1,6 +1,4 @@
-using System;
 using System.Diagnostics.CodeAnalysis;
-using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -47,6 +45,8 @@ public class PathCreatorWindow : EditorWindow
             enemy.Speed = speed;
             enemy.Origin = Instantiate(traversalObject, originalPos , Quaternion.identity);
             enemy.FirstPoint = Instantiate(traversalObject, originalPos + endPosOffset, Quaternion.identity);  
+            
+            EditorUtility.SetDirty(enemy);
             
             Debug.Log("done");
         }
