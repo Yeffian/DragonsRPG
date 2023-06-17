@@ -41,9 +41,10 @@ public class PathCreatorWindow : EditorWindow
             // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
             enemy = patroller.GetComponent<EnemyController>();
 
-            var originalPos = patroller.transform.position;
+            // ReSharper disable once Unity.InefficientPropertyAccess
+            var originalPos = new Vector3(patroller.transform.position.x, patroller.transform.position.y, patroller.transform.position.z);
             enemy.Speed = speed;
-            enemy.Origin = Instantiate(traversalObject, originalPos , Quaternion.identity);
+            enemy.Origin = Instantiate(traversalObject, originalPos, Quaternion.identity);
             enemy.FirstPoint = Instantiate(traversalObject, originalPos + endPosOffset, Quaternion.identity);  
             
             EditorUtility.SetDirty(enemy);
