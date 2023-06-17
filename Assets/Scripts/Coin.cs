@@ -23,8 +23,11 @@ public class Coin : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("coin achieved!");
-        Destroy(gameObject);
-        score.IncrementScore();
+        if (col.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("coin achieved!");
+            Destroy(gameObject);
+            score.IncrementScore();   
+        }
     }
 }
