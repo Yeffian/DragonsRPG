@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [Serializable]
 public class EnemyController : MonoBehaviour
@@ -46,6 +47,15 @@ public class EnemyController : MonoBehaviour
             Debug.Log(dir);
             Debug.Log(target.name);
             target = dir == TraversalDirection.FirstToOrigin ? FirstPoint : Origin;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("Player"))
+        {
+            // TODO: Scene transitions
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
         }
     }
 }
