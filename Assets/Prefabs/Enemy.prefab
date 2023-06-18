@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FirstPoint: {fileID: 0}
   Origin: {fileID: 0}
-  Speed: 0.5
+  Speed: 0.6
 --- !u!61 &5185890853916876103
 BoxCollider2D:
   m_ObjectHideFlags: 0

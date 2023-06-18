@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8036023502376802258}
   - component: {fileID: 8036023502376802259}
   m_Layer: 0
-  m_Name: Traversal Point
+  m_Name: Vertical Traversal Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.36864525, y: -0.021294303}
+  m_Offset: {x: 0.17810209, y: -0.021294303}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -56,5 +56,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5368501, y: 0.05124505}
+  m_Size: {x: 0.91793644, y: 0.05124505}
   m_EdgeRadius: 0
