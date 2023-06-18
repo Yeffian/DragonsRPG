@@ -39,10 +39,13 @@ public class EnemyController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        dir = ReverseDirection(dir);
+        if (other.gameObject.CompareTag("Traversal Point"))
+        {
+            dir = ReverseDirection(dir);
 
-        Debug.Log(dir);
-        Debug.Log(target.name);
-        target = dir == TraversalDirection.FirstToOrigin ? FirstPoint : Origin;
+            Debug.Log(dir);
+            Debug.Log(target.name);
+            target = dir == TraversalDirection.FirstToOrigin ? FirstPoint : Origin;
+        }
     }
 }
