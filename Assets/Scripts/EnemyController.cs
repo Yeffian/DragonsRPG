@@ -21,11 +21,9 @@ public class EnemyController : MonoBehaviour
     private GameObject target;
 
     private TraversalDirection ReverseDirection(TraversalDirection dir)
-    {
-        return dir == TraversalDirection.OriginToFirst ? TraversalDirection.FirstToOrigin : TraversalDirection.OriginToFirst;
-    }
-    
-    // Start is called before the first frame update
+        => dir == TraversalDirection.OriginToFirst ? TraversalDirection.FirstToOrigin : TraversalDirection.OriginToFirst;
+
+         // Start is called before the first frame update
     void Start()
     {
         target = FirstPoint;
