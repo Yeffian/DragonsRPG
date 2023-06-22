@@ -37,6 +37,7 @@ public class MovementController : MonoBehaviour
         
         _animator.SetFloat("Horizontal", _moveDir.x);
         _animator.SetFloat("Vertical", _moveDir.y);
+        _animator.SetFloat("Speed", _moveDir.sqrMagnitude);
     }
 
     private void Move()
