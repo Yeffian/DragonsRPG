@@ -281,7 +281,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 0.9216095
+  orthographic size: 0.90208554
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -305,7 +305,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: -0.005, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4608,9 +4608,29 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.00547722
       objectReference: {fileID: 0}
+    - target: {fileID: 4626284096523773895, guid: faad0a4498d99724fa4b481ad57610b1, type: 3}
+      propertyPath: m_Size.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4626284096523773895, guid: faad0a4498d99724fa4b481ad57610b1, type: 3}
+      propertyPath: m_Size.y
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4626284096523773895, guid: faad0a4498d99724fa4b481ad57610b1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 238538687, guid: a80bc983eff5173458febf858a8ab6ed, type: 3}
+    - target: {fileID: 4626284096523773895, guid: faad0a4498d99724fa4b481ad57610b1, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4626284096523773912, guid: faad0a4498d99724fa4b481ad57610b1, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4626284096523773912, guid: faad0a4498d99724fa4b481ad57610b1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: faad0a4498d99724fa4b481ad57610b1, type: 3}
