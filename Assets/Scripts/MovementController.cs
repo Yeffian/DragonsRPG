@@ -10,11 +10,13 @@ public class MovementController : MonoBehaviour
     
     private Vector2 _moveDir;
     private Rigidbody2D _rb;
+    private Animator _animator;
     
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -30,10 +32,12 @@ public class MovementController : MonoBehaviour
 
     private void ProcessInputs()
     {
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxisRaw("Vertical");
-
-        _moveDir = new Vector2(x, y).normalized;
+        _moveDir.x = Input.GetAxisRaw("Horizontal");
+        _moveDir.y = Input.GetAxisRaw("Vertical");
+        
+        _animator.SetFloat("Horizontal", _moveDir.x);
+        _animator.SetFloat("Vertical", _moveDir.y);
+        _animator.SetFloat("Speed", _moveDir.sqrMagnitude);
     }
 
     private void Move()
