@@ -281,7 +281,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 0.78122973
+  orthographic size: 0.9119123
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4592,57 +4592,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4626284096523773893, guid: faad0a4498d99724fa4b481ad57610b1, type: 3}
-      propertyPath: m_Size.x
-      value: 0.20727126
-      objectReference: {fileID: 0}
-    - target: {fileID: 4626284096523773893, guid: faad0a4498d99724fa4b481ad57610b1, type: 3}
-      propertyPath: m_Size.y
-      value: 0.23752493
-      objectReference: {fileID: 0}
-    - target: {fileID: 4626284096523773893, guid: faad0a4498d99724fa4b481ad57610b1, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.00018484145
-      objectReference: {fileID: 0}
-    - target: {fileID: 4626284096523773893, guid: faad0a4498d99724fa4b481ad57610b1, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.00547722
-      objectReference: {fileID: 0}
-    - target: {fileID: 4626284096523773893, guid: faad0a4498d99724fa4b481ad57610b1, type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 0.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 4626284096523773893, guid: faad0a4498d99724fa4b481ad57610b1, type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 0.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 4626284096523773894, guid: faad0a4498d99724fa4b481ad57610b1, type: 3}
-      propertyPath: speedMultiplier
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 4626284096523773895, guid: faad0a4498d99724fa4b481ad57610b1, type: 3}
-      propertyPath: m_Size.x
-      value: 0.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 4626284096523773895, guid: faad0a4498d99724fa4b481ad57610b1, type: 3}
-      propertyPath: m_Size.y
-      value: 0.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 4626284096523773895, guid: faad0a4498d99724fa4b481ad57610b1, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 238538687, guid: a80bc983eff5173458febf858a8ab6ed, type: 3}
-    - target: {fileID: 4626284096523773895, guid: faad0a4498d99724fa4b481ad57610b1, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4626284096523773912, guid: faad0a4498d99724fa4b481ad57610b1, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4626284096523773912, guid: faad0a4498d99724fa4b481ad57610b1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: faad0a4498d99724fa4b481ad57610b1, type: 3}
