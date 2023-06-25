@@ -9,17 +9,17 @@ public class MapManager : MonoBehaviour
     [SerializeField] private List<TileData> data;
     [SerializeField] private Transform player;
 
-    private Dictionary<TileBase, TileData> tiles;
+    private Dictionary<TileBase, TileData> _tiles;
 
     private void Awake()
     {
-        tiles = new();
+        _tiles = new();
 
         foreach (var tileData in data)
         {
             foreach (var tile in tileData.tiles)
             {
-                tiles.Add(tile, tileData);
+                _tiles.Add(tile, tileData);
             }
         }
     }
@@ -30,7 +30,7 @@ public class MapManager : MonoBehaviour
         Vector3Int gridPos = tilemap.WorldToCell(player.position);
 
         TileBase selectedTile = tilemap.GetTile(gridPos);
-        bool isDangerous = tiles[selectedTile].IsDangerous;
+        bool isDangerous = _tiles[selectedTile].IsDangerous;
 
         if (isDangerous) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
     }

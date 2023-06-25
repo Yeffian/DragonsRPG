@@ -17,8 +17,8 @@ public class EnemyController : MonoBehaviour
     [SerializeField] public GameObject Origin;
     [SerializeField] public float Speed;
 
-    private TraversalDirection dir;
-    private GameObject target;
+    private TraversalDirection _dir;
+    private GameObject _target;
 
     private TraversalDirection ReverseDirection(TraversalDirection dir)
         => dir == TraversalDirection.OriginToFirst ? TraversalDirection.FirstToOrigin : TraversalDirection.OriginToFirst;
@@ -26,25 +26,25 @@ public class EnemyController : MonoBehaviour
          // Start is called before the first frame update
     void Start()
     {
-        target = FirstPoint;
-        dir = TraversalDirection.OriginToFirst;
+        _target = FirstPoint;
+        _dir = TraversalDirection.OriginToFirst;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target.transform.position, Speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, _target.transform.position, Speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Traversal Point"))
         {
-            dir = ReverseDirection(dir);
+            _dir = ReverseDirection(_dir);
 
-            Debug.Log(dir);
-            Debug.Log(target.name);
-            target = dir == TraversalDirection.FirstToOrigin ? FirstPoint : Origin;
+            Debug.Log(_dir);
+            Debug.Log(_target.name);
+            _target = _dir == TraversalDirection.FirstToOrigin ? FirstPoint : Origin;
         }
     }
 

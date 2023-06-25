@@ -11,13 +11,13 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private List<Scene> scenes;
 
-    private int maxCoins;
+    private int _maxCoins;
     
     // Start is called before the first frame update
     void Start()
     {
-        maxCoins = FindObjectsOfType<Coin>().Length;
-        Debug.Log("coins in this scene: " + maxCoins);
+        _maxCoins = FindObjectsOfType<Coin>().Length;
+        Debug.Log("coins in this scene: " + _maxCoins);
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class ScoreManager : MonoBehaviour
     {
         text.text = $"Score: {Score}";
         
-        if (Score == maxCoins)
+        if (Score == _maxCoins)
         {
             int currentSceneindex = SceneManager.GetActiveScene().buildIndex;
             int nextSceneIndex = currentSceneindex + 1;
