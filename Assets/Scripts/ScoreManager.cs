@@ -9,7 +9,6 @@ public class ScoreManager : MonoBehaviour
     public int Score { get; set; }
 
     [SerializeField] private TextMeshProUGUI text;
-    [SerializeField] private List<Scene> scenes;
 
     private int _maxCoins;
     

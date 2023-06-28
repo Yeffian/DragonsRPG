@@ -4269,7 +4269,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 822013195}
-  scenes: []
 --- !u!4 &1867332846
 Transform:
   m_ObjectHideFlags: 0
