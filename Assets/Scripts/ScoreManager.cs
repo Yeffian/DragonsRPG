@@ -27,7 +27,9 @@ public class ScoreManager : MonoBehaviour
         if (Score == _maxCoins)
         {
             int currentSceneindex = SceneManager.GetActiveScene().buildIndex;
-            int nextSceneIndex = currentSceneindex + 1;
+            
+            // TODO: Use scene names instead of indices, might be easier to handle?
+            int nextSceneIndex = currentSceneindex > 1 ? 3 : currentSceneindex + 1;
             Debug.Log(currentSceneindex);
             Debug.Log(currentSceneindex + 1);
 
