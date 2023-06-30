@@ -11,11 +11,13 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI text;
 
     private int _maxCoins;
+    private string _currentSceneName;
     
     // Start is called before the first frame update
     void Start()
     {
         _maxCoins = FindObjectsOfType<Coin>().Length;
+        _currentSceneName = SceneManager.GetActiveScene().name;
         Debug.Log("coins in this scene: " + _maxCoins);
     }
 
@@ -27,20 +29,18 @@ public class ScoreManager : MonoBehaviour
         if (Score == _maxCoins)
         {
             int currentSceneindex = SceneManager.GetActiveScene().buildIndex;
-            
-            // TODO: Use scene names instead of indices, might be easier to handle?
-            int nextSceneIndex = currentSceneindex > 1 ? 3 : currentSceneindex + 1;
+            int nextSceneIndex = currentSceneindex + 1;
             Debug.Log(currentSceneindex);
             Debug.Log(currentSceneindex + 1);
-
-            if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+            
+            if (nextSceneIndex < SceneManager.sceneCountInBuildSettings - 2)
             {
                 SceneManager.LoadScene(nextSceneIndex, LoadSceneMode.Single);
             }
             else
             {
                 Debug.Log("max scenes reached");
-                // TODO: Go to game over scene
+                SceneManager.LoadScene(3);
             }
         }
     }
