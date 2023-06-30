@@ -18,7 +18,7 @@ public class ScoreManager : MonoBehaviour
     {
         _maxCoins = FindObjectsOfType<Coin>().Length;
         _currentSceneName = SceneManager.GetActiveScene().name;
-        Debug.Log("coins in this scene: " + _maxCoins);
+        //Debug.Log("coins in this scene: " + _maxCoins);
     }
 
     // Update is called once per frame
@@ -30,8 +30,8 @@ public class ScoreManager : MonoBehaviour
         {
             int currentSceneindex = SceneManager.GetActiveScene().buildIndex;
             int nextSceneIndex = currentSceneindex + 1;
-            Debug.Log(currentSceneindex);
-            Debug.Log(currentSceneindex + 1);
+            //Debug.Log(currentSceneindex);
+            //Debug.Log(currentSceneindex + 1);
             
             if (nextSceneIndex < SceneManager.sceneCountInBuildSettings - 2)
             {
@@ -39,7 +39,7 @@ public class ScoreManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("max scenes reached");
+              //  Debug.Log("max scenes reached");
                 SceneManager.LoadScene(3);
             }
         }

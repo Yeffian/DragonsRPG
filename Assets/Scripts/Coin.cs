@@ -8,7 +8,7 @@ public class Coin : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            Debug.Log("coin achieved!");
+           // Debug.Log("coin achieved!");
             Destroy(gameObject);
             score.IncrementScore();   
         }

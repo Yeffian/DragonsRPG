@@ -42,8 +42,8 @@ public class EnemyController : MonoBehaviour
         {
             _dir = ReverseDirection(_dir);
 
-            Debug.Log(_dir);
-            Debug.Log(_target.name);
+           // Debug.Log(_dir);
+           // Debug.Log(_target.name);
             _target = _dir == TraversalDirection.FirstToOrigin ? FirstPoint : Origin;
         }
     }
