@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - Clip: {fileID: 8300000, guid: b1f09a108770b674fafeb72c0baedabe, type: 3}
+  - Clip: {fileID: 8300000, guid: 15e7a06de19913349b2ed650a288bf5c, type: 3}
     Name: Pickup Coin
     Volume: 1
     Pitch: 1
