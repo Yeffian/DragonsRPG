@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Coin : MonoBehaviour
@@ -8,9 +9,10 @@ public class Coin : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-           // Debug.Log("coin achieved!");
-            Destroy(gameObject);
-            score.IncrementScore();   
+           //   Debug.Log("coin achieved!");
+           FindObjectOfType<AudioManager>().PlaySound("Pickup Coin");
+           Destroy(gameObject);
+           score.IncrementScore();   
         }
     }
 }
