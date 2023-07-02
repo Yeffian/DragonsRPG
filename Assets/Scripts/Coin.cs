@@ -10,7 +10,7 @@ public class Coin : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
            //   Debug.Log("coin achieved!");
-           FindObjectOfType<AudioManager>().PlaySound("Pickup Coin");
+           AudioManager.Instance.PlaySound("Pickup Coin");
            Destroy(gameObject);
            score.IncrementScore();   
         }
