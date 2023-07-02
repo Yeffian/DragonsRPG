@@ -5,10 +5,24 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     [SerializeField] private List<Sound> sounds;
+
+    public static AudioManager Instance;
     
     // Start is called before the first frame update
     void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+        
+        DontDestroyOnLoad(gameObject);
+        
         foreach (Sound sound in sounds)
         {
             sound.Source = gameObject.AddComponent<AudioSource>();
