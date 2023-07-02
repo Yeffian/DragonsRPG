@@ -32,6 +32,10 @@ public class MapManager : MonoBehaviour
         TileBase selectedTile = tilemap.GetTile(gridPos);
         bool isDangerous = _tiles[selectedTile].IsDangerous;
 
-        if (isDangerous) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+        if (isDangerous)
+        {
+            AudioManager.Instance.PlaySound("Die");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+        }
     }
 }
