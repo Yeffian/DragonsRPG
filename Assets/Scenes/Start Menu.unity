@@ -312,26 +312,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2001809429753184583, guid: 66e2fb3366cf09f44acc6002ca216bd5, type: 3}
-      propertyPath: sounds.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2001809429753184583, guid: 66e2fb3366cf09f44acc6002ca216bd5, type: 3}
-      propertyPath: sounds.Array.data[1].Clip
-      value: 
-      objectReference: {fileID: 8300000, guid: c141b256cc7fd68449d0261616d1a9b0, type: 3}
-    - target: {fileID: 2001809429753184583, guid: 66e2fb3366cf09f44acc6002ca216bd5, type: 3}
-      propertyPath: sounds.Array.data[1].Name
-      value: Die
-      objectReference: {fileID: 0}
-    - target: {fileID: 2001809429753184583, guid: 66e2fb3366cf09f44acc6002ca216bd5, type: 3}
-      propertyPath: sounds.Array.data[1].Pitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2001809429753184583, guid: 66e2fb3366cf09f44acc6002ca216bd5, type: 3}
-      propertyPath: sounds.Array.data[1].Volume
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66e2fb3366cf09f44acc6002ca216bd5, type: 3}
 --- !u!1 &211181987
