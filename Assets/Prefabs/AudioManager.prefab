@@ -50,3 +50,8 @@ MonoBehaviour:
     Volume: 1
     Pitch: 1
     Source: {fileID: 0}
+  - Clip: {fileID: 8300000, guid: c141b256cc7fd68449d0261616d1a9b0, type: 3}
+    Name: Die
+    Volume: 1
+    Pitch: 1
+    Source: {fileID: 0}
