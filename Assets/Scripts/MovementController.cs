@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class MovementController : MonoBehaviour
@@ -40,5 +41,11 @@ public class MovementController : MonoBehaviour
     private void Move()
     {
         _rb.velocity = new Vector2(_moveDir.x * speedMultiplier, _moveDir.y * speedMultiplier);
+    }
+
+    public void Die()
+    {
+        AudioManager.Instance.PlaySound("Die");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
     }
 }
