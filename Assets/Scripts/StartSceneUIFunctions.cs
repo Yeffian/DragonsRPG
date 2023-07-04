@@ -11,7 +11,8 @@ public class StartSceneUIFunctions : MonoBehaviour
     
     public void StartButton()
     {
-        StartCoroutine(LoadLevel(0));
+        var transitionManager = FindObjectOfType<SceneTransitionManager>();
+        transitionManager.GoToScene(0);
     }
 
     public void ExitButton()
@@ -26,10 +27,10 @@ public class StartSceneUIFunctions : MonoBehaviour
         Application.Quit();
     }
 
-    IEnumerator LoadLevel(int idx)
-    {
-        transition.SetTrigger("Start");
-        yield return new WaitForSeconds(transitionTime);
-        SceneManager.LoadScene(idx, LoadSceneMode.Single);
-    }
+    // IEnumerator LoadLevel(int idx)
+    // {
+    //     transition.SetTrigger("Start");
+    //     yield return new WaitForSeconds(transitionTime);
+    //     SceneManager.LoadScene(idx, LoadSceneMode.Single);
+    // }
 }
