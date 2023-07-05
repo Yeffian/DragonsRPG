@@ -7,6 +7,7 @@ public class SceneTransitionManager : MonoBehaviour
 {
     [SerializeField] private Animator transition;
     [SerializeField] private float transitionTime = 1;
+    [SerializeField] private GameObject fade;
 
     private Canvas _canvas;
     
@@ -18,6 +19,7 @@ public class SceneTransitionManager : MonoBehaviour
 
     private IEnumerator LoadScene(int idx)
     {
+        fade.SetActive(true);
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(idx, LoadSceneMode.Single);

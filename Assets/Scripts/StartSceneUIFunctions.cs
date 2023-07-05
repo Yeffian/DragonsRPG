@@ -26,11 +26,4 @@ public class StartSceneUIFunctions : MonoBehaviour
 
         Application.Quit();
     }
-
-    // IEnumerator LoadLevel(int idx)
-    // {
-    //     transition.SetTrigger("Start");
-    //     yield return new WaitForSeconds(transitionTime);
-    //     SceneManager.LoadScene(idx, LoadSceneMode.Single);
-    // }
 }
