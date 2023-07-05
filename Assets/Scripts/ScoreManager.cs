@@ -11,11 +11,13 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI text;
 
     private int _maxCoins;
+    private SceneTransitionManager _transitionManager;
     
     // Start is called before the first frame update
     void Start()
     {
         _maxCoins = FindObjectsOfType<Coin>().Length;
+        _transitionManager = FindObjectOfType<SceneTransitionManager>();
         //Debug.Log("coins in this scene: " + _maxCoins);
     }
 
@@ -33,8 +35,9 @@ public class ScoreManager : MonoBehaviour
             
             if (nextSceneIndex < SceneManager.sceneCountInBuildSettings - 2)
             {
-                AudioManager.Instance.PlaySound("Next Level");
-                SceneManager.LoadScene(nextSceneIndex, LoadSceneMode.Single);
+                // AudioManager.Instance.PlaySound("Next Level");
+                // SceneManager.LoadScene(nextSceneIndex, LoadSceneMode.Single);
+                _transitionManager.NextLevel();
             }
             else
             {
