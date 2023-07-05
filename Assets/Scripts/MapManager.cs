@@ -10,10 +10,12 @@ public class MapManager : MonoBehaviour
     [SerializeField] private Transform player;
 
     private Dictionary<TileBase, TileData> _tiles;
+    private MovementController _player;
 
     private void Awake()
     {
         _tiles = new();
+        _player = FindObjectOfType<MovementController>();
 
         foreach (var tileData in data)
         {
@@ -34,8 +36,7 @@ public class MapManager : MonoBehaviour
 
         if (isDangerous)
         {
-            AudioManager.Instance.PlaySound("Die");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+            _player.Die();
         }
     }
 }

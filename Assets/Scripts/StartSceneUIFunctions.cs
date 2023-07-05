@@ -6,15 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class StartSceneUIFunctions : MonoBehaviour
 {
+    [SerializeField] private Animator transition;
+    [SerializeField] private float transitionTime;
+    
     public void StartButton()
     {
-        SceneManager.LoadScene(0, LoadSceneMode.Single);
+        var transitionManager = FindObjectOfType<SceneTransitionManager>();
+        transitionManager.GoToScene(0);
     }
 
     public void ExitButton()
     {
 #if UNITY_EDITOR
-        if(EditorApplication.isPlaying)
+        if (EditorApplication.isPlaying)
         {
             EditorApplication.isPlaying = false;
         }

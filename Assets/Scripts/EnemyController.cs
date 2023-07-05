@@ -52,9 +52,8 @@ public class EnemyController : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            // TODO: Scene transitions
-            AudioManager.Instance.PlaySound("Die");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+            var player = col.gameObject.GetComponent<MovementController>();
+            player.Die();
         }
     }
 }

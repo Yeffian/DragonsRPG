@@ -7,6 +7,7 @@ public class GameOverUIFunctions : MonoBehaviour
 {
     public void GoBackButton()
     {
-        SceneManager.LoadScene(2, LoadSceneMode.Single);
+        var transitionManager = FindObjectOfType<SceneTransitionManager>();
+        transitionManager.GoToScene(2);
     }
 }
