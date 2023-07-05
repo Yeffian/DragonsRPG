@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
-    public int Score { get; set; }
+    public int Score { get; private set; }
 
     [SerializeField] private TextMeshProUGUI text;
 
