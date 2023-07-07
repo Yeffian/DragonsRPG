@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransitionManager : MonoBehaviour
 {
+    public enum MenuType
+    {
+        Start, GameOver
+    }
+    
     [SerializeField] private Animator transition;
     [SerializeField] private float transitionTime = 1;
     [SerializeField] private GameObject fade;
@@ -42,5 +47,18 @@ public class SceneTransitionManager : MonoBehaviour
         string nextSceneName = $"Level {levelIndex + 1}";
         
         GoToScene(nextSceneName);
+    }
+
+    public void OpenMenu(MenuType menuType)
+    {
+        switch (menuType)
+        {
+            case MenuType.Start:
+                GoToScene(2);
+                break;
+            case MenuType.GameOver:
+                GoToScene(3);
+                break;
+        }
     }
 }

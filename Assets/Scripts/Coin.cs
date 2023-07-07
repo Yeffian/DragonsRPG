@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static SceneTransitionManager;
 
 public class Coin : MonoBehaviour
 {
@@ -41,7 +42,8 @@ public class Coin : MonoBehaviour
                else
                {
                    //  Debug.Log("max scenes reached");
-                   SceneManager.LoadScene(3);
+                   var transitionManager = FindObjectOfType<SceneTransitionManager>();
+                   transitionManager.OpenMenu(MenuType.GameOver);               
                }
            }
         }
