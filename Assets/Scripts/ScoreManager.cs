@@ -18,33 +18,12 @@ public class ScoreManager : MonoBehaviour
     {
         _maxCoins = FindObjectsOfType<Coin>().Length;
         _transitionManager = FindObjectOfType<SceneTransitionManager>();
-        //Debug.Log("coins in this scene: " + _maxCoins);
     }
 
     // Update is called once per frame
     void Update()
     {
         text.text = $"Score: {Score}";
-        
-        if (Score == _maxCoins)
-        {
-            int currentSceneindex = SceneManager.GetActiveScene().buildIndex;
-            int nextSceneIndex = currentSceneindex + 1;
-            //Debug.Log(currentSceneindex);
-            //Debug.Log(currentSceneindex + 1);
-            
-            if (nextSceneIndex < SceneManager.sceneCountInBuildSettings - 2)
-            {
-                // AudioManager.Instance.PlaySound("Next Level");
-                // SceneManager.LoadScene(nextSceneIndex, LoadSceneMode.Single);
-                _transitionManager.NextLevel();
-            }
-            else
-            {
-                //  Debug.Log("max scenes reached");
-                SceneManager.LoadScene(3);
-            }
-        }
     }
 
     public void IncrementScore()

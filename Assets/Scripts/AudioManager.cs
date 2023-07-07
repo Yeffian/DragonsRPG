@@ -35,6 +35,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySound(string name)
     {
-        sounds.Find(s => s.Name == name).Source.Play();
+        var source = sounds.Find(s => s.Name == name).Source;
+        source.Play();
     }
 }
