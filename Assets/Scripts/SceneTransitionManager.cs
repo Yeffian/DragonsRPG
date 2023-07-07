@@ -10,14 +10,6 @@ public class SceneTransitionManager : MonoBehaviour
     [SerializeField] private float transitionTime = 1;
     [SerializeField] private GameObject fade;
 
-    private Canvas _canvas;
-    
-    // Start is called before the first frame update
-    void Awake()
-    {
-        _canvas = FindObjectOfType<Canvas>();
-    }
-
     private IEnumerator LoadScene(int idx)
     {
         fade.SetActive(true);
@@ -49,8 +41,6 @@ public class SceneTransitionManager : MonoBehaviour
         int levelIndex = Int32.Parse(Regex.Match(SceneManager.GetActiveScene().name, @"\d+").Value);
         string nextSceneName = $"Level {levelIndex + 1}";
         
-        // TODO: Figure out the exploding sound 
-        AudioManager.Instance.PlaySound("Next Level");
         GoToScene(nextSceneName);
     }
 }
