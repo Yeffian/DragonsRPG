@@ -28,4 +28,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: aa334f2e6bd522b4ea169c7cbd73db10, type: 2}
   - {fileID: 11400000, guid: 40d900a660f299e4685122e4d9ff77cf, type: 2}
   - {fileID: 11400000, guid: b9aa423050728a74ba1f3112dbf93f3b, type: 2}
+  - {fileID: 11400000, guid: b9aa423050728a74ba1f3112dbf93f3b, type: 2}
   IsDangerous: 0
