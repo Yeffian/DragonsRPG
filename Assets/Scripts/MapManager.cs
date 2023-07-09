@@ -20,6 +20,9 @@ public class MapManager : MonoBehaviour
         {
             foreach (var tile in tileData.tiles)
             {
+                if (_tiles.ContainsKey(tile))
+                    return;
+                
                 _tiles.Add(tile, tileData);
             }
         }
@@ -31,7 +34,9 @@ public class MapManager : MonoBehaviour
         Vector3Int gridPos = tilemap.WorldToCell(player.position);
 
         TileBase selectedTile = tilemap.GetTile(gridPos);
+        Debug.Log(selectedTile.name);
         bool isDangerous = _tiles[selectedTile].IsDangerous;
+        // Debug.Log(isDangerous);
 
         if (isDangerous)
         {
