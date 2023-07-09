@@ -35,8 +35,8 @@ public class Coin : MonoBehaviour
             
                if (nextSceneIndex < SceneManager.sceneCountInBuildSettings - 2)
                {
-                   // AudioManager.Instance.PlaySound("Next Level");
                    // SceneManager.LoadScene(nextSceneIndex, LoadSceneMode.Single);
+                   AudioManager.Instance.PlaySound("Next Level");
                    _transitionManager.NextLevel();
                }
                else
