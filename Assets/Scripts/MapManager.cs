@@ -39,8 +39,6 @@ public class MapManager : MonoBehaviour
         // Debug.Log(isDangerous);
 
         if (isDangerous)
-        {
-            _player.Die();
-        }
+            _player.Die(); 
     }
 }

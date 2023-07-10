@@ -47,6 +47,8 @@ public class MovementController : MonoBehaviour
 
     public void Die()
     {
+        // TODO: Find a safer way to not have explody sound
+        Destroy(gameObject);
         AudioManager.Instance.PlaySound("Die");
         _transitionManager.GoToScene(SceneManager.GetActiveScene().buildIndex);
     }
