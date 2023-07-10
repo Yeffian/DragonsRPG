@@ -9,12 +9,14 @@ public class MovementController : MonoBehaviour
     private Vector2 _moveDir;
     private Rigidbody2D _rb;
     private Animator _animator;
+    private SceneTransitionManager _transitionManager;
     
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        _transitionManager = FindObjectOfType<SceneTransitionManager>();
     }
 
     // Update is called once per frame
@@ -46,6 +48,6 @@ public class MovementController : MonoBehaviour
     public void Die()
     {
         AudioManager.Instance.PlaySound("Die");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+        _transitionManager.GoToScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
