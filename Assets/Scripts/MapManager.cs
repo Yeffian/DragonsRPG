@@ -31,6 +31,9 @@ public class MapManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (player == null)
+            return;
+        
         Vector3Int gridPos = tilemap.WorldToCell(player.position);
 
         TileBase selectedTile = tilemap.GetTile(gridPos);
