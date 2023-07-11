@@ -37,7 +37,7 @@ public class MapManager : MonoBehaviour
         Vector3Int gridPos = tilemap.WorldToCell(player.position);
 
         TileBase selectedTile = tilemap.GetTile(gridPos);
-        Debug.Log(selectedTile.name);
+        // Debug.Log(selectedTile.name);
         bool isDangerous = _tiles[selectedTile].IsDangerous;
         // Debug.Log(isDangerous);
 

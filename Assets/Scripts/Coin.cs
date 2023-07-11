@@ -30,6 +30,7 @@ public class Coin : MonoBehaviour
            {
                int currentSceneindex = SceneManager.GetActiveScene().buildIndex;
                int nextSceneIndex = currentSceneindex + 1;
+               Debug.Log($"The index of the next scene is {nextSceneIndex}");
                //Debug.Log(currentSceneindex);
                //Debug.Log(currentSceneindex + 1);
             

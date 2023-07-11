@@ -45,7 +45,8 @@ public class SceneTransitionManager : MonoBehaviour
     {
         int levelIndex = Int32.Parse(Regex.Match(SceneManager.GetActiveScene().name, @"\d+").Value);
         string nextSceneName = $"Level {levelIndex + 1}";
-        
+        Debug.Log($"Level {levelIndex + 1} next");
+
         GoToScene(nextSceneName);
     }
 
