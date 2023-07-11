@@ -41,13 +41,15 @@ public class SceneTransitionManager : MonoBehaviour
         StartCoroutine(LoadScene(name));
     }
 
-    public void NextLevel()
+    public (string, string) NextLevel()
     {
-        int levelIndex = Int32.Parse(Regex.Match(SceneManager.GetActiveScene().name, @"\d+").Value);
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        int levelIndex = Int32.Parse(Regex.Match(currentSceneName, @"\d+").Value);
         string nextSceneName = $"Level {levelIndex + 1}";
         Debug.Log($"Level {levelIndex + 1} next");
 
         GoToScene(nextSceneName);
+        return (currentSceneName, nextSceneName);
     }
 
     public void OpenMenu(MenuType menuType)
@@ -55,10 +57,10 @@ public class SceneTransitionManager : MonoBehaviour
         switch (menuType)
         {
             case MenuType.Start:
-                GoToScene(2);
+                GoToScene(4);
                 break;
             case MenuType.GameOver:
-                GoToScene(3);
+                GoToScene(5);
                 break;
         }
     }

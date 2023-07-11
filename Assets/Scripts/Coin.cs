@@ -31,20 +31,22 @@ public class Coin : MonoBehaviour
                int currentSceneindex = SceneManager.GetActiveScene().buildIndex;
                int nextSceneIndex = currentSceneindex + 1;
                Debug.Log($"The index of the next scene is {nextSceneIndex}");
-               //Debug.Log(currentSceneindex);
-               //Debug.Log(currentSceneindex + 1);
-            
+               // //Debug.Log(currentSceneindex);
+               // //Debug.Log(currentSceneindex + 1);
+               //
                if (nextSceneIndex < SceneManager.sceneCountInBuildSettings - 2)
                {
-                   // SceneManager.LoadScene(nextSceneIndex, LoadSceneMode.Single);
+               //     // SceneManager.LoadScene(nextSceneIndex, LoadSceneMode.Single);
                    AudioManager.Instance.PlaySound("Next Level");
-                   _transitionManager.NextLevel();
+                   (string current, string next) = _transitionManager.NextLevel();
+                   Debug.Log(current == next);
+                   // Debug.Log($"{nextSceneIndex} < {SceneManager.sceneCountInBuildSettings - 2} = );
                }
                else
                {
-                   //  Debug.Log("max scenes reached");
+                   Debug.Log("max scenes reached");
                    var transitionManager = FindObjectOfType<SceneTransitionManager>();
-                   transitionManager.OpenMenu(MenuType.GameOver);               
+                   transitionManager.OpenMenu(MenuType.GameOver);          
                }
            }
         }
