@@ -30,19 +30,8 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, _target.transform.position, Speed * Time.deltaTime);
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Traversal Point"))
-        {
-            _dir = ReverseDirection(_dir);
-
-           // Debug.Log(_dir);
-           // Debug.Log(_target.name);
-            _target = _dir == TraversalDirection.FirstToOrigin ? FirstPoint : Origin;
-        }
+        // Thank you nt314p for this clever solution
+        transform.position = Vector3.Lerp(FirstPoint.transform.position, Origin.transform.position, Mathf.PingPong(Time.time * Speed, 1));
     }
 
     private void OnCollisionEnter2D(Collision2D col)
