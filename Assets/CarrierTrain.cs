@@ -7,6 +7,8 @@ public class CarrierTrain : MovingObject
     [SerializeField] public float Speed = 0.8f;
 
     private float t;
+
+    private GameObject player;
     
     // Update is called once per frame
     void Update()
@@ -18,34 +20,22 @@ public class CarrierTrain : MovingObject
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            Pickup();
+            Pickup(col.gameObject);
         }
     }
     
-    public void Pickup()
+    public void Pickup(GameObject player)
     {
-        Debug.Log("pickup");
+        this.player = player;
+        player.transform.SetParent(transform);
     }
 
     public void DropOff()
     {
-        Debug.Log("drop off");
+        if (player != null)
+        {
+            player.transform.SetParent(null);
+            player = null;
+        }
     }
-    
-    //
-    // private void OnCollisionStay2D(Collision2D collision)
-    // {
-    //     collision.gameObject.transform.position = t > 0.5f ? left.position : right.position;
-    //
-    //     Debug.Log(t);
-    // }
-    //
-    // private void OnCollisionExit2D(Collision2D col)
-    // {
-    //     if (col.gameObject.CompareTag("Player"))
-    //     {
-    //         Debug.Log("hit player");
-    //         col.transform.SetParent(null);
-    //     }
-    // }
 }

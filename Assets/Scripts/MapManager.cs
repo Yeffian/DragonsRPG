@@ -42,6 +42,9 @@ public class MapManager : MonoBehaviour
         // Debug.Log(isDangerous);
 
         if (isDangerous)
-            _player.Die(); 
+        {
+            if (_player.gameObject.transform.parent == null)
+                _player.Die();
+        }
     }
 }
