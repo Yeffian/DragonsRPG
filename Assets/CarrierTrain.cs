@@ -4,6 +4,7 @@ public class CarrierTrain : MovingObject
 {
     [SerializeField] public GameObject Left;
     [SerializeField] public GameObject Right;
+    [SerializeField] public Transform SnapPoint;
     [SerializeField] public float Speed = 0.8f;
 
     private float t;
@@ -28,6 +29,7 @@ public class CarrierTrain : MovingObject
     {
         this.player = player;
         player.transform.SetParent(transform);
+        player.transform.position = SnapPoint.position;
     }
 
     public void DropOff()
