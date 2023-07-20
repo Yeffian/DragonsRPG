@@ -8,12 +8,11 @@ public class TrainPoint : MonoBehaviour
     {
         if (col.gameObject.name == "Carrier")
         {
+            Debug.Log("drop off here");
             CarrierTrain train = col.gameObject.GetComponent<CarrierTrain>();
 
             if (dropOff)
-            {
                 train.DropOff();
-            }
         }
-     }
+    }
 }

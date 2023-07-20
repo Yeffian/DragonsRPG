@@ -10,6 +10,7 @@ public class MovementController : MonoBehaviour
     private Rigidbody2D _rb;
     private Animator _animator;
     private SceneTransitionManager _transitionManager;
+    private bool _canMove;
     
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,8 @@ public class MovementController : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         _transitionManager = FindObjectOfType<SceneTransitionManager>();
+        
+        UnlockMovement();
     }
 
     // Update is called once per frame
@@ -27,7 +30,12 @@ public class MovementController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Move();
+        if (_canMove)
+           Move();
+        // else
+        //     Debug.Log("cannot move");
+        //
+        // Move();
     }
 
     private void ProcessInputs()
@@ -50,5 +58,16 @@ public class MovementController : MonoBehaviour
         Destroy(gameObject);
         AudioManager.Instance.PlaySound("Die");
         _transitionManager.GoToScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void LockMovement()
+    {
+        _canMove = false;
+    }
+    
+    
+    public void UnlockMovement()
+    {
+        _canMove = true;
     }
 }

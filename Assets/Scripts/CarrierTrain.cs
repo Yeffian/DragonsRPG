@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class CarrierTrain : MovingObject
@@ -10,7 +11,7 @@ public class CarrierTrain : MovingObject
     private float t;
 
     private GameObject player;
-    
+
     // Update is called once per frame
     void Update()
     {
@@ -24,20 +25,32 @@ public class CarrierTrain : MovingObject
             Pickup(col.gameObject);
         }
     }
-    
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        Debug.Log(player != null ? $"{player.name} is picked up" : "no player picked up");
+    }
+
     public void Pickup(GameObject player)
     {
+        Debug.Log($"picked up {player.name}");
         this.player = player;
-        player.transform.SetParent(transform);
-        player.transform.position = SnapPoint.position;
+        this.player.transform.SetParent(transform);
+        this.player.transform.position = SnapPoint.position;
+        this.player.GetComponent<MovementController>().LockMovement();
     }
 
     public void DropOff()
     {
-        if (player != null)
-        {
-            player.transform.SetParent(null);
-            player = null;
-        }
+        if (player == null) return;
+        
+        // player.transform.position = Right.transform.position;
+        player.transform.SetParent(null);
+        player.GetComponent<MovementController>().UnlockMovement();
+        player = null;
+        // else
+        // {
+        //     Debug.Log($"{player.name}");
+        // }
     }
 }
