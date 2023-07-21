@@ -5025,6 +5025,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coin
       objectReference: {fileID: 0}
+    - target: {fileID: 753817613201749049, guid: 35a7e74af2b485d468dd7e92868c4b6f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 967739181, guid: bec2d78024ecd5147ae09a3780334eab, type: 3}
     - target: {fileID: 2113372966112821138, guid: 35a7e74af2b485d468dd7e92868c4b6f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -5069,10 +5073,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7475158501924450564, guid: 35a7e74af2b485d468dd7e92868c4b6f, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 15e7a06de19913349b2ed650a288bf5c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35a7e74af2b485d468dd7e92868c4b6f, type: 3}
 --- !u!4 &1355050272432872530 stripped

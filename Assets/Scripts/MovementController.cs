@@ -64,8 +64,7 @@ public class MovementController : MonoBehaviour
     {
         _canMove = false;
     }
-    
-    
+
     public void UnlockMovement()
     {
         _canMove = true;

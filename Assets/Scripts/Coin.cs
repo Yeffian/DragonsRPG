@@ -1,4 +1,5 @@
 using System;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using static SceneTransitionManager;
@@ -6,6 +7,8 @@ using static SceneTransitionManager;
 public class Coin : MonoBehaviour
 {
     [SerializeField] private ScoreManager score;
+    [SerializeField] private float scaleFactor;
+    [SerializeField] private float scaleTime;
     
     private int _maxCoins;
     private SceneTransitionManager _transitionManager;
@@ -21,10 +24,7 @@ public class Coin : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-           //   Debug.Log("coin achieved!");
-           AudioManager.Instance.PlaySound("Pickup Coin");
-           Destroy(gameObject);
-           score.IncrementScore();   
+           AddCoin();
            
            if (score.Score == _maxCoins)
            {
@@ -50,5 +50,15 @@ public class Coin : MonoBehaviour
                }
            }
         }
+    }
+
+    private void AddCoin()
+    {
+        var originalScale = gameObject.transform.localScale;
+        var finalScale = new Vector3(originalScale.x + scaleFactor, originalScale.y + scaleFactor, originalScale.z + scaleFactor);
+        AudioManager.Instance.PlaySound("Pickup Coin");
+        gameObject.transform.DOScale(finalScale, scaleTime).onComplete = () => Destroy(gameObject);
+        // Destroy(gameObject);
+        score.IncrementScore();  
     }
 }
