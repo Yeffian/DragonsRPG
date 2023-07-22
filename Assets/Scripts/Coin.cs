@@ -58,7 +58,6 @@ public class Coin : MonoBehaviour
         var finalScale = new Vector3(originalScale.x + scaleFactor, originalScale.y + scaleFactor, originalScale.z + scaleFactor);
         AudioManager.Instance.PlaySound("Pickup Coin");
         gameObject.transform.DOScale(finalScale, scaleTime).onComplete = () => Destroy(gameObject);
-        // Destroy(gameObject);
         score.IncrementScore();  
     }
 }

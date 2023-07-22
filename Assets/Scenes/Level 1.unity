@@ -4010,7 +4010,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974264617}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.064, y: 0.045, z: 0}
+  m_LocalPosition: {x: 2.26, y: 0.045, z: 0}
   m_LocalScale: {x: 0.36845702, y: 1.955, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4156,7 +4156,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1247256986}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.927, y: 0.045, z: 0}
+  m_LocalPosition: {x: -2.136, y: 0.045, z: 0}
   m_LocalScale: {x: 0.36845702, y: 1.955, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5021,14 +5021,14 @@ PrefabInstance:
       propertyPath: score
       value: 
       objectReference: {fileID: 1867332845}
+    - target: {fileID: 1824332609, guid: 35a7e74af2b485d468dd7e92868c4b6f, type: 3}
+      propertyPath: scaleTime
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 661773231657361089, guid: 35a7e74af2b485d468dd7e92868c4b6f, type: 3}
       propertyPath: m_Name
       value: coin
       objectReference: {fileID: 0}
-    - target: {fileID: 753817613201749049, guid: 35a7e74af2b485d468dd7e92868c4b6f, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 967739181, guid: bec2d78024ecd5147ae09a3780334eab, type: 3}
     - target: {fileID: 2113372966112821138, guid: 35a7e74af2b485d468dd7e92868c4b6f, type: 3}
       propertyPath: m_RootOrder
       value: 0
