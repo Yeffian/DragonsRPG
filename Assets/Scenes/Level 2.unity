@@ -4373,7 +4373,7 @@ PrefabInstance:
     - target: {fileID: -4764415257448403518, guid: c85a49657c9e61548a1e2d73368d66ef, type: 3}
       propertyPath: pauseScreen
       value: 
-      objectReference: {fileID: 1207239238}
+      objectReference: {fileID: 0}
     - target: {fileID: 7849678245167800736, guid: c85a49657c9e61548a1e2d73368d66ef, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -4436,11 +4436,6 @@ PrefabInstance:
       objectReference: {fileID: 729396090}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c85a49657c9e61548a1e2d73368d66ef, type: 3}
---- !u!1 &1207239238 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7849678245167800736, guid: c85a49657c9e61548a1e2d73368d66ef, type: 3}
-  m_PrefabInstance: {fileID: 1207239237}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1238869769
 GameObject:
   m_ObjectHideFlags: 0
@@ -4579,7 +4574,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7849678245167800737, guid: c85a49657c9e61548a1e2d73368d66ef, type: 3}
   m_PrefabInstance: {fileID: 1207239237}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1207239238}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb5fb96f15a2a1f42ace6a2cabb1ddde, type: 3}
