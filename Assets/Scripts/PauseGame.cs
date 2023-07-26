@@ -13,21 +13,27 @@ public class PauseGame : MonoBehaviour
         pauseScreen.SetActive(false);
     }
 
+    public void Pause()
+    {
+        Time.timeScale = 0.0f;
+        _paused = true;
+    }
+
+    public void Unpause()
+    {
+        Time.timeScale = _timeScale;
+        _paused = false;
+    }
+    
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (_paused == false)
-            {
-                Time.timeScale = 0.0f;
-                _paused = !_paused;
-            }
+                Pause();
             else if (_paused)
-            {
-                Time.timeScale = _timeScale;
-                _paused = !_paused;
-            }
+                Unpause();
         }
         
         pauseScreen.SetActive(_paused);
