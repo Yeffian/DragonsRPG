@@ -15,7 +15,7 @@ public class EnemyController : MovingObject
         float t = Mathf.PingPong(Time.time * Speed, 1);
         transform.position = Vector3.Lerp(FirstPoint.transform.position, Origin.transform.position, t);
     }
-
+    
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Player"))
