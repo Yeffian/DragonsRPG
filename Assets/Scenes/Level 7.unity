@@ -393,6 +393,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb5fb96f15a2a1f42ace6a2cabb1ddde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &515344122 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4764415257448403518, guid: c85a49657c9e61548a1e2d73368d66ef, type: 3}
+  m_PrefabInstance: {fileID: 515344120}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a3a19fff193dd4b90fb0abe09709db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &536289020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1531,6 +1542,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 106882201}
     m_Modifications:
+    - target: {fileID: 6878003455929224072, guid: 9894a935379f4b64c9b5b485ba105d25, type: 3}
+      propertyPath: pauseControls
+      value: 
+      objectReference: {fileID: 515344122}
     - target: {fileID: 6878003455929224076, guid: 9894a935379f4b64c9b5b485ba105d25, type: 3}
       propertyPath: m_Name
       value: Pause Menu

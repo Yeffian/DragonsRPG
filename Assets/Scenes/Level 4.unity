@@ -682,6 +682,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 821339472}
     m_Modifications:
+    - target: {fileID: 6878003455929224072, guid: 9894a935379f4b64c9b5b485ba105d25, type: 3}
+      propertyPath: pauseControls
+      value: 
+      objectReference: {fileID: 1523231470}
     - target: {fileID: 6878003455929224076, guid: 9894a935379f4b64c9b5b485ba105d25, type: 3}
       propertyPath: m_Name
       value: Pause Menu
@@ -1128,6 +1132,17 @@ PrefabInstance:
       objectReference: {fileID: 1536815053}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c85a49657c9e61548a1e2d73368d66ef, type: 3}
+--- !u!114 &1523231470 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4764415257448403518, guid: c85a49657c9e61548a1e2d73368d66ef, type: 3}
+  m_PrefabInstance: {fileID: 1523231469}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a3a19fff193dd4b90fb0abe09709db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1536815052
 GameObject:
   m_ObjectHideFlags: 0
