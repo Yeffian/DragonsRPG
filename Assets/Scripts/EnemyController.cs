@@ -4,6 +4,7 @@ using UnityEngine;
 [Serializable]
 public class EnemyController : MovingObject
 {
+    [SerializeField] private Animator animator;
     [SerializeField] public GameObject FirstPoint;
     [SerializeField] public GameObject Origin;
     [SerializeField] public float Speed;
@@ -13,6 +14,8 @@ public class EnemyController : MovingObject
     {
         // Thank you nt314p for this clever solution
         float t = Mathf.PingPong(Time.time * Speed, 1);
+        Debug.Log(t);
+        animator.SetFloat("Vertical", t);
         transform.position = Vector3.Lerp(FirstPoint.transform.position, Origin.transform.position, t);
     }
     
