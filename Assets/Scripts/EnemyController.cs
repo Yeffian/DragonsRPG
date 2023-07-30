@@ -14,7 +14,7 @@ public class EnemyController : MovingObject
     {
         // Thank you nt314p for this clever solution
         float t = Mathf.PingPong(Time.time * Speed, 1);
-        Debug.Log(t);
+        // Debug.Log(t);
         animator.SetFloat("Vertical", t);
         transform.position = Vector3.Lerp(FirstPoint.transform.position, Origin.transform.position, t);
     }
