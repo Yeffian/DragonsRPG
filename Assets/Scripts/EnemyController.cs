@@ -4,10 +4,18 @@ using UnityEngine;
 [Serializable]
 public class EnemyController : MovingObject
 {
-    [SerializeField] private Animator animator;
     [SerializeField] public GameObject FirstPoint;
     [SerializeField] public GameObject Origin;
     [SerializeField] public float Speed;
+
+    private bool upDown;
+    private Animator _animator;
+
+    private void Start()
+    {
+        upDown = true;
+        _animator = GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -15,7 +23,8 @@ public class EnemyController : MovingObject
         // Thank you nt314p for this clever solution
         float t = Mathf.PingPong(Time.time * Speed, 1);
         // Debug.Log(t);
-        animator.SetFloat("Vertical", t);
+        
+        _animator.Play(upDown ? "anim_updown" : "anim_downup");
         transform.position = Vector3.Lerp(FirstPoint.transform.position, Origin.transform.position, t);
     }
     
@@ -25,6 +34,16 @@ public class EnemyController : MovingObject
         {
             var player = col.gameObject.GetComponent<MovementController>();
             player.Die();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("Traversal Point"))
+        {
+            upDown = !upDown;
+            
+            Debug.Log(upDown ? "playing up animation" : "playing down");
         }
     }
 }
