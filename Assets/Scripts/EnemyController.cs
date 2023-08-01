@@ -7,6 +7,7 @@ public class EnemyController : MovingObject
     [SerializeField] public GameObject FirstPoint;
     [SerializeField] public GameObject Origin;
     [SerializeField] public float Speed;
+    [SerializeField] private bool horizontal;
 
     private bool upDown;
     private Animator _animator;
@@ -41,9 +42,10 @@ public class EnemyController : MovingObject
     {
         if (col.gameObject.CompareTag("Traversal Point"))
         {
-            upDown = !upDown;
+            if (!horizontal)
+                upDown = !upDown;
             
-            Debug.Log(upDown ? "playing up animation" : "playing down");
+            // Debug.Log(upDown ? "playing up animation" : "playing down");
         }
     }
 }
