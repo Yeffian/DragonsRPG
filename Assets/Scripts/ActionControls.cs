@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PauseGame : MonoBehaviour
+public class ActionControls : MonoBehaviour
 {
     [SerializeField] private GameObject pauseScreen;
     
