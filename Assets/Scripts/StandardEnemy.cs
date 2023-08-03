@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 [Serializable]
-public class EnemyController : MovingObject
+public class StandardEnemy : MovingObject
 {
     [SerializeField] public GameObject FirstPoint;
     [SerializeField] public GameObject Origin;
