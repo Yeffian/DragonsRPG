@@ -22,30 +22,11 @@ public class StandardEnemy : MovingObject
     void Update()
     {
         // Thank you nt314p for this clever solution
-        float t = Mathf.PingPong(Time.time * Speed, 1);
+        // float t = Mathf.PingPong(Time.time * Speed, 1);
         // Debug.Log(t);
-        
-        _animator.Play(upDown ? "anim_updown" : "anim_downup");
-        transform.position = Vector3.Lerp(FirstPoint.transform.position, Origin.transform.position, t);
-    }
-    
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.CompareTag("Player"))
-        {
-            var player = col.gameObject.GetComponent<MovementController>();
-            player.Die();
-        }
-    }
 
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.CompareTag("Traversal Point"))
-        {
-            if (!horizontal)
-                upDown = !upDown;
-            
-            // Debug.Log(upDown ? "playing up animation" : "playing down");
-        }
+        Move(FirstPoint, Origin, Speed);
+        _animator.Play(upDown ? "anim_updown" : "anim_downup");
+        // transform.position = Vector3.Lerp(FirstPoint.transform.position, Origin.transform.position, t);
     }
 }
