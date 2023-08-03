@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenuUIFunctions : MonoBehaviour
 {
-    [SerializeField] private PauseGame pauseControls;
+    [SerializeField] private ActionControls pauseControls;
     
     public void ReturnButton()
     {
