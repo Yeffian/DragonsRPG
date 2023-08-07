@@ -29,4 +29,13 @@ public class StandardEnemy : MovingObject
         _animator.Play(upDown ? "anim_updown" : "anim_downup");
         // transform.position = Vector3.Lerp(FirstPoint.transform.position, Origin.transform.position, t);
     }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("Player"))
+        {
+            var player = col.gameObject.GetComponent<MovementController>();
+            player.Die();
+        }
+    }
 }
