@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 7687190920289414370}
   m_Layer: 0
   m_Name: Carrier
-  m_TagString: Untagged
+  m_TagString: Carrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

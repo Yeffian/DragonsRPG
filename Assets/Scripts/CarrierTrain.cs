@@ -12,6 +12,11 @@ public class CarrierTrain : MovingObject
 
     private GameObject player;
 
+    private void Start()
+    {
+        Debug.Log($"Carrier Name: {gameObject.name}");
+    }
+
     // Update is called once per frame
     void Update()
     {
