@@ -1342,7 +1342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3992487478298829589, guid: cc494787a481cfb40bac993661f34480, type: 3}
       propertyPath: lastDropped
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3992487478298829590, guid: cc494787a481cfb40bac993661f34480, type: 3}
       propertyPath: m_Name
