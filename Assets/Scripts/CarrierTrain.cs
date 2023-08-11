@@ -20,7 +20,14 @@ public class CarrierTrain : MovingObject
     // Update is called once per frame
     void Update()
     {
+        var lastPos = transform.position;
         t = Move(Left, Right, Speed);
+
+        if (player != null)
+        {
+            if (Input.anyKey)
+                DropOff();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -42,7 +49,6 @@ public class CarrierTrain : MovingObject
         this.player = player;
         this.player.transform.SetParent(transform);
         this.player.transform.position = SnapPoint.position;
-        this.player.GetComponent<MovementController>().LockMovement();
     }
 
     public void DropOff()
@@ -51,7 +57,7 @@ public class CarrierTrain : MovingObject
         
         // player.transform.position = Right.transform.position;
         player.transform.SetParent(null);
-        player.GetComponent<MovementController>().UnlockMovement();
+        // player.GetComponent<MovementController>().UnlockMovement();
         player = null;
         // else
         // {
