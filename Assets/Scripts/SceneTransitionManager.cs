@@ -57,7 +57,7 @@ public class SceneTransitionManager : MonoBehaviour
         switch (menuType)
         {
             case MenuType.Start:
-                GoToScene(SceneManager.sceneCountInBuildSettings - 2);
+                GoToScene(0);
                 break;
             case MenuType.GameOver:
                 GoToScene(SceneManager.sceneCountInBuildSettings - 1);

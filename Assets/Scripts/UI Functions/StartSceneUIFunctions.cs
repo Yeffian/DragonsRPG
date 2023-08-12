@@ -9,7 +9,7 @@ public class StartSceneUIFunctions : MonoBehaviour
     public void StartButton()
     {
         var transitionManager = FindObjectOfType<SceneTransitionManager>();
-        transitionManager.GoToScene(0);
+        transitionManager.GoToScene(1);
     }
 
     public void ExitButton()
