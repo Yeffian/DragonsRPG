@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class MovementController : MonoBehaviour
@@ -8,12 +9,14 @@ public class MovementController : MonoBehaviour
     private Vector2 _moveDir;
     private Rigidbody2D _rb;
     private Animator _animator;
+    private SceneTransitionManager _transitionManager;
     
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        _transitionManager = FindObjectOfType<SceneTransitionManager>();
     }
 
     // Update is called once per frame
@@ -25,6 +28,10 @@ public class MovementController : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
+        // else
+        //     Debug.Log("cannot move");
+        //
+        // Move();
     }
 
     private void ProcessInputs()
@@ -40,5 +47,12 @@ public class MovementController : MonoBehaviour
     private void Move()
     {
         _rb.velocity = new Vector2(_moveDir.x * speedMultiplier, _moveDir.y * speedMultiplier);
+    }
+
+    public void Die()
+    {
+        Destroy(gameObject);
+        AudioManager.Instance.PlaySound("Die");
+        _transitionManager.GoToScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

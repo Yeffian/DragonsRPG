@@ -11,7 +11,7 @@ public class PathCreatorWindow : EditorWindow
     private GameObject patroller;
     private GameObject traversalObject;
 
-    private EnemyController enemy;
+    private StandardEnemy enemy;
     
     [MenuItem("Window/Enemies")]
     public static void ShowWindow()
@@ -39,7 +39,7 @@ public class PathCreatorWindow : EditorWindow
         if (GUILayout.Button("Create Path"))
         {
             // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
-            enemy = patroller.GetComponent<EnemyController>();
+            enemy = patroller.GetComponent<StandardEnemy>();
 
             // ReSharper disable once Unity.InefficientPropertyAccess
             var originalPos = new Vector3(patroller.transform.position.x, patroller.transform.position.y, patroller.transform.position.z);
